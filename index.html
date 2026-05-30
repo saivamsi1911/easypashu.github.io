@@ -8,8 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-green: #117B34; /* Matched from Easy text */
-            --primary-orange: #E85D04; /* Matched from Pashu text */
+            --primary-green: #117B34;
+            --primary-orange: #E85D04;
             --light-green: #eef8ee;
             --text-dark: #333333;
             --text-light: #666666;
@@ -31,11 +31,23 @@
 
         /* Navigation */
         nav {
-            padding: 20px 5%;
+            padding: 15px 5%;
             background-color: var(--white);
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             display: flex;
             align-items: center;
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 12px; /* Space between logo image and text */
+        }
+
+        .logo-img {
+            height: 45px; /* Adjust height as needed for your actual logo */
+            width: auto;
+            object-fit: contain;
         }
 
         .logo-text {
@@ -187,8 +199,12 @@
 <body>
 
     <nav>
-        <div class="logo-text">
-            <span>Easy</span><span>Pashu</span>
+        <div class="brand-container">
+            <img src="easy_pashu.jpeg" alt="Easy Pashu Logo" class="logo-img">
+            
+            <div class="logo-text">
+                <span>Easy</span><span>Pashu</span>
+            </div>
         </div>
     </nav>
 
