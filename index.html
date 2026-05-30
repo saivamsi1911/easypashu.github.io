@@ -1,10 +1,250 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Easy Pashu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Pashu - Buy & Sell Livestock</title>
+    <meta name="description" content="Your trusted partner for buying & selling livestock. पशु खरीदें, विश्वास के साथ।">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #117B34; /* Matched from Easy text */
+            --primary-orange: #E85D04; /* Matched from Pashu text */
+            --light-green: #eef8ee;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--light-green);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 20px 5%;
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-text {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .logo-text span:first-child { color: var(--primary-green); }
+        .logo-text span:last-child { color: var(--primary-orange); }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 40px;
+        }
+
+        .hero-content h1 {
+            font-size: 56px;
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        .hero-content h1 .green { color: var(--primary-green); }
+        .hero-content h1 .orange { color: var(--primary-orange); }
+
+        .hindi-tagline {
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--primary-green);
+            margin-bottom: 15px;
+        }
+
+        .english-tagline {
+            font-size: 20px;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+
+        .playstore-btn img {
+            width: 200px;
+            transition: transform 0.2s ease;
+        }
+
+        .playstore-btn img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Hero Image/Mockup area */
+        .hero-image {
+            flex: 1;
+            min-width: 200px;
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .hero-image img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        /* Features Section */
+        .features {
+            background-color: var(--white);
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            padding: 20px;
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--light-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+        }
+
+        .feature-icon svg {
+            width: 35px;
+            height: 35px;
+            fill: var(--primary-green);
+        }
+
+        .feature-card h3 {
+            font-size: 18px;
+            color: var(--primary-green);
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-green);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 5%;
+            }
+            .hero-content {
+                padding-right: 0;
+            }
+            .hero-content h1 {
+                font-size: 42px;
+            }
+            .hindi-tagline {
+                font-size: 24px;
+            }
+            .english-tagline {
+                margin: 0 auto 30px auto;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Easy Pashu</h1>
-    <p>Your Trusted Livestock Marketplace.</p>
+
+    <nav>
+        <div class="logo-text">
+            <span>Easy</span><span>Pashu</span>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1><span class="green">Easy</span> <span class="orange">Pashu</span></h1>
+            <div class="hindi-tagline">पशु खरीदें, विश्वास के साथ</div>
+            <p class="english-tagline">Your trusted partner for buying & selling livestock</p>
+            
+            <a href="https://play.google.com/store/apps/details?id=com.rdn.easypashu&pcampaignid=web_share" target="_blank" class="playstore-btn">
+                <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"/>
+            </a>
+        </div>
+
+        <div class="hero-image">
+            <img src="Screenshot_20260502_100439.png" alt="Easy Pashu App Interface">
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="features-grid">
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                </div>
+                <h3>Verified &<br>Trusted</h3>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+                <h3>Local &<br>Nearby</h3>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                </div>
+                <h3>Explore<br>Livestock</h3>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </div>
+                <h3>Save Your<br>Favorites</h3>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Easy Pashu. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
